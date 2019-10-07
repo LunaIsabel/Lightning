@@ -4,20 +4,20 @@ int endX = 300;
 int endY = 300;
 void setup()
 {
-  strokeWeight();
+  strokeWeight(5);
   background(43, 47, 119);
   size(700, 700);
   frameRate(100);
+  stroke(255, 0, 0);
 }
 void draw()
 {
-	stroke(Math.random() * 100;)
-	while(endX < 300){
-		endX = startX + 7;
-		endY = startY + 3;
+	endX = startX;
+	endY = startY;
+	startX += (int)(Math.random() * 20) - 10;
+	startY += (int)(Math.random() * 20) - 10;
+	if(startX > 700 && startY > 700 && startX < 0 && startY < 0){
 		line(startX, startY, endX, endY);
-		startX = endX;
-		startY = endY;
 	}
 }
 void mousePressed()
